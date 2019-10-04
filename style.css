@@ -1,0 +1,114 @@
+body {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	margin: 0;
+}
+
+.wide-col {
+	width: 65%;
+	height: 100%;
+	display: flex;
+}
+
+.narrow-col {
+	width: 35%;
+	height: 100%;
+
+}
+
+.box {
+	height: 50%;
+	width: 100%;
+	display: flex;
+}
+
+.purple {	background-color: #ACAFD5;}
+
+.blue {background-color: #97B4F0;}
+
+.yellow {background-color: #F9E7A7;}
+
+/* The following divs contain the code for adding the images on the webpage.*/
+.day {content: url("images/day1.jpg");}
+
+.evening {content: url("images/evening1.jpg");}
+
+.night {content: url("images/night1.jpg");}
+
+
+/* https://philipwalton.github.io/solved-by-flexbox/demos/vertical-centering/ */
+/* If you're using 'display: flex' this class can be used to easily center horizontally! */
+.center-horizontal {
+	align-items: center;	
+}
+
+/* If you're using 'display: flex' this class can be used to easily center vertically! */
+.center-vertical {
+	justify-content: center;
+}
+
+/* Keep your image from overflowing it's parent DIV */
+.contain-image {
+	max-height: 75%;
+	max-width: 50%;
+}
+
+@media only screen and (max-width: 800px) {
+	body{ display: block;}
+	.wide-col {
+		width: 100%;
+		height: 65%;
+		display: flex;
+	}
+	
+	.narrow-col {
+		width: 100%;
+		height: calc(100%/1/3);
+		display: flex;
+	}
+	
+	.box {
+		height: 100%;
+		width: 50%;
+	}
+	
+	/* The divs have share the same class as the divs above, but have a different image address. This will change the image shown on the webpage when it is resized.*/
+	.day {content: url("images/day2.jpg");}
+	
+	.evening {content: url("images/evening2.jpg");}
+	
+	.night {content: url("images/night2.jpg");}
+}
+
+
+@media only screen and (max-width: 600px) {
+	body {
+		display: block;
+	}
+	
+	.wide-col {
+		width: 100%;
+		height: 65%;
+		display: flex;
+	}
+	
+	.narrow-col {
+		width: 100%;
+		height: 35%;
+		display: block;
+	}
+	
+	.box {
+		height: 100%;
+		width: 100%;
+	}
+	
+	/* The divs have share the same class as the divs above, but have a different image address. This will change the image shown on the webpage when it is resized.*/
+
+	.day {content: url("images/day3.jpg");}
+	
+	.evening {content: url("images/evening3.jpg");}
+	
+	.night {content: url("images/night3.jpg");}
+}
